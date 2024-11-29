@@ -1,200 +1,224 @@
 <!DOCTYPE html>
 <html lang="hi">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>रजत जयंती धन्यवाद संदेश</title>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400&display=swap"
-		rel="stylesheet"
-	/>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>रजत जयंती धन्यवाद संदेश</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 
-		body,
-		html {
-			height: 100%;
-			font-family: "Raleway", sans-serif;
-		}
+			body,
+			html {
+				height: 100%;
+				font-family: "Raleway", sans-serif;
+			}
 
-		/* Background slideshow setup */
-		.slideshow-container {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			z-index: -1;
-		}
+			/* Background slideshow setup */
+			.slideshow-container {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				z-index: -1;
+			}
 
-		.slide {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-size: cover;
-			background-position: center;
-			opacity: 0;
-			animation: slideFade 30s infinite;
-		}
+			.slide {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				opacity: 0;
+				animation: slideFade 30s infinite;
+			}
 
-		.slide:nth-child(1) {
-			background-image: url("https://faonline.in/25ann/image1.JPG");
-			animation-delay: 0s;
-		}
-		.slide:nth-child(2) {
-			background-image: url("https://faonline.in/25ann/image2.JPG");
-			animation-delay: 10s;
-		}
-		.slide:nth-child(3) {
-			background-image: url("https://faonline.in/25ann/image3.JPG");
-			animation-delay: 20s;
-		}
+			.slide:nth-child(1) {
+				background-image: url("https://faonline.in/25ann/image1.JPG");
+				animation-delay: 0s;
+			}
+			.slide:nth-child(2) {
+				background-image: url("https://faonline.in/25ann/image2.JPG");
+				animation-delay: 10s;
+			}
+			.slide:nth-child(3) {
+				background-image: url("https://faonline.in/25ann/image3.JPG");
+				animation-delay: 20s;
+			}
 
-		@keyframes slideFade {
-			0% { opacity: 0; }
-			10% { opacity: 1; }
-			30% { opacity: 1; }
-			40% { opacity: 0; }
-			100% { opacity: 0; }
-		}
+			@keyframes slideFade {
+				0% {
+					opacity: 0;
+				}
+				10% {
+					opacity: 1;
+				}
+				30% {
+					opacity: 1;
+				}
+				40% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
 
-		/* Gray overlay */
-		.overlay {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0.5);
-			z-index: 0;
-		}
+			/* Gray overlay */
+			.overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 0;
+			}
 
-		/* Centered Content */
-		.content {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			text-align: center;
-			color: #fff;
-			z-index: 1;
-			text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7); /* Soft shadow to enhance readability */
-		}
+			/* Centered Content */
+			.content {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				color: #fff;
+				z-index: 1;
+				text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7); /* Soft shadow to enhance readability */
+			}
 
-		.content h1 {
-			font-family: "Great Vibes", cursive;
-			font-size: 3em;
-			color: #e1bee7;
-			margin-bottom: 0.5em;
-		}
-
-		.content h2 {
-			font-size: 2em;
-			font-weight: 400;
-			margin: 0.5em 0;
-		}
-
-		.content p {
-			font-size: 1.2em;
-			line-height: 1.6;
-		}
-
-		.highlight {
-			font-size: 1.5em;
-			color: #e1bee7;
-			font-weight: bold;
-		}
-
-		/* Loader bar */
-		.loader {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 5px;
-			background: rgba(255, 255, 255, 0.3);
-			overflow: hidden;
-		}
-
-		.loader .progress {
-			height: 100%;
-			width: 100%;
-			background: #fff;
-			animation: loaderAnimation 10s infinite;
-		}
-
-		@keyframes loaderAnimation {
-			0% { transform: translateX(-100%); }
-			100% { transform: translateX(0); }
-		}
-
-		/* Media Queries for Mobile */
-		@media (max-width: 768px) {
 			.content h1 {
-				font-size: 2.5em;
+				font-family: "Great Vibes", cursive;
+				font-size: 3em;
+				color: #e1bee7;
+				margin-bottom: 0.5em;
 			}
 
 			.content h2 {
-				font-size: 1.5em;
-			}
-
-			.content p {
-				font-size: 1em;
-			}
-
-			.highlight {
-				font-size: 1.2em;
-			}
-		}
-
-		@media (max-width: 480px) {
-			.content h1 {
 				font-size: 2em;
-			}
-
-			.content h2 {
-				font-size: 1.3em;
+				font-weight: 400;
+				margin: 0.5em 0;
+				color: #d7e16b;
 			}
 
 			.content p {
-				font-size: 0.9em;
+				font-size: 1.2em;
+				line-height: 1.6;
+			}
+
+			.highlight2 {
+				color: #cceebd;
 			}
 
 			.highlight {
-				font-size: 1.1em;
+				font-size: 1.5em;
+				color: #e1bee7;
+				font-weight: bold;
 			}
-		}
-	</style>
-</head>
-<body>
-	<!-- Slideshow Background -->
-	<div class="slideshow-container">
-		<div class="slide"></div>
-		<div class="slide"></div>
-		<div class="slide"></div>
-	</div>
 
-	<!-- Gray Overlay -->
-	<div class="overlay"></div>
+			/* Loader bar */
+			.loader {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 5px;
+				background: rgba(255, 255, 255, 0.3);
+				overflow: hidden;
+			}
 
-	<!-- Anniversary Message Content -->
-	<div class="content">
-		<h1>रजत जयंती</h1>
-		<h2>श्री रुपेश चंद्रा एवं श्रीमती अर्चना चंद्रा</h2>
-		<p class="highlight">( दिनांक १ दिसम्बर, २०२४ )</p>
-		<p>के सुअवसर पर आयोजित समारोह में सम्मिलित होने एवं शुभाशीष प्रदान करने के लिए आपका अनेकानेक धन्यवाद।</p>
-		<p>आशा है कि हमारे प्रति आपका यह स्नेह एवं सहयोग चिरकाल तक कायम रहेगा।</p>
-	</div>
+			.loader .progress {
+				height: 100%;
+				width: 100%;
+				background: #fff;
+				animation: loaderAnimation 10s infinite;
+			}
 
-	<!-- Loader Bar -->
-	<div class="loader">
-		<div class="progress"></div>
-	</div>
-</body>
+			@keyframes loaderAnimation {
+				0% {
+					transform: translateX(-100%);
+				}
+				100% {
+					transform: translateX(0);
+				}
+			}
+
+			/* Media Queries for Mobile */
+			@media (max-width: 768px) {
+				.content h1 {
+					font-size: 2.5em;
+				}
+
+				.content h2 {
+					font-size: 1.5em;
+				}
+
+				.content p {
+					font-size: 1em;
+				}
+
+				.highlight {
+					font-size: 1.2em;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.content h1 {
+					font-size: 2em;
+				}
+
+				.content h2 {
+					font-size: 1.3em;
+				}
+
+				.content p {
+					font-size: 1.1em;
+				}
+
+				.highlight {
+					font-size: 1.1em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Slideshow Background -->
+		<div class="slideshow-container">
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+		</div>
+
+		<!-- Gray Overlay -->
+		<div class="overlay"></div>
+
+		<!-- Anniversary Message Content -->
+		<div class="content">
+			<h1>रजत जयंती</h1>
+			<h2>श्री रुपेश चंद्रा एवं श्रीमती अर्चना चंद्रा</h2>
+			<p class="highlight">( दिनांक १ दिसम्बर, २०२४ )</p>
+			<p class="highlight2">
+				के सुअवसर पर आयोजित समारोह में सम्मिलित होने एवं शुभाशीष प्रदान करने के
+				लिए आपका अनेकानेक धन्यवाद।
+			</p>
+		<br/>
+			<p class="highlight2">
+				आशा है कि हमारे प्रति आपका यह स्नेह एवं सहयोग चिरकाल तक बना रहेगा।
+			</p>
+		</div>
+
+		<!-- Loader Bar -->
+		<div class="loader">
+			<div class="progress"></div>
+		</div>
+	</body>
 </html>
-
